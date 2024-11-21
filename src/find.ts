@@ -20,6 +20,10 @@ const main = async () => {
     const findUnique = await prisma.post.findUniqueOrThrow({
         where: {
             id: 3
+        },
+        // if we want show specific field value then using select 
+        select: {
+            title: true,
         }
     })
 
